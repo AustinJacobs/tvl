@@ -1,7 +1,8 @@
 import { Navbar, Link, Dropdown, Image, Text, Button } from '@nextui-org/react';
+import { NavLink } from 'react-router-dom';
 import { Layout } from '../components/styles/Layout';
 import { icons } from '../assets/Icons';
-import Logo from '../assets/cropped-tetonvalleylodge.png';
+import Logo from '../assets/tvl_logo.png';
 import { SlPhone } from 'react-icons/sl';
 
 export default function App() {
@@ -14,26 +15,28 @@ export default function App() {
         <Navbar.Brand
           css={{
             '@xs': {
-              w: '22%',
-            },
-            '@sm': {
-              w: '14%',
-            },
-            '@md': {
-              w: '14%',
-            },
-            '@lg': {
-              w: '14%',
-            },
-            '@xl': {
               w: '8%',
             },
+            '@sm': {
+              w: '7%',
+            },
+            '@md': {
+              w: '6%',
+            },
+            '@lg': {
+              w: '4%',
+            },
+            '@xl': {
+              w: '2%',
+            },
           }}>
-          <Image src={Logo} alt='TVL Fish Logo' />
+          <NavLink to='/'>
+            <Image src={Logo} alt='TVL Fish Logo' />
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Content
           enableCursorHighlight
-          activeColor='red'
+          activeColor=''
           hideIn='xs'
           variant='underline'>
           <Dropdown isBordered>
@@ -65,21 +68,38 @@ export default function App() {
                   '& .nextui-dropdown-item-content': {
                     w: '100%',
                     fontWeight: '$semibold',
-                    color: '#F75A0D',
                   },
                 },
               }}>
               <Dropdown.Item
+                key='book_now'
+                showFullDescription
+                description='The research is done and you ready to book. This is your next step.'>
+                <NavLink className='clickableArea navLink' to='/book-now'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Book Now
+                  </Text>
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item
                 key='contact_us'
                 showFullDescription
                 description='Have a question about fishing or just want to say hi? We’d love to hear from you. Drop us a line and we will respond as soon as possible.'>
-                Contact Us
+                <NavLink className='clickableArea navLink' to='/contact'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Contact Us
+                  </Text>
+                </NavLink>
               </Dropdown.Item>
               <Dropdown.Item
                 key='trip_details'
                 showFullDescription
-                description="Ready to book the trip of a lifetime? Let's get started!">
-                Trip Details
+                description='Ready to start researching your next unforgettable trip to Teton Valley Lodge? Click here!'>
+                <NavLink className='clickableArea navLink' to='/trip-details'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Trip Details
+                  </Text>
+                </NavLink>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -152,9 +172,9 @@ export default function App() {
             <Button
               auto
               as={Link}
-              href='#'
+              href='/book-now'
               css={{ backgroundColor: '#F75A0D' }}>
-              <Text css={{ fontWeight: 700, color: '#EAEAEA' }}>BOOK NOW</Text>
+              <Text css={{ fontWeight: 700, color: '#FFFFFF' }}>BOOK NOW</Text>
             </Button>
           </Navbar.Item>
         </Navbar.Content>
