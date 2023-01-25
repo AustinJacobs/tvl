@@ -11,10 +11,12 @@ import Teton from './components/rivers/Teton';
 import SouthFork from './components/rivers/SouthFork';
 import HenrysFork from './components/rivers/HenrysFork';
 import Guides from './components/Guides';
+import GlobalStyles from './components/styles/GlobalStyles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <GlobalStyles />
     <Router>
       <Header />
       <Routes>

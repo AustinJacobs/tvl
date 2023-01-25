@@ -60,7 +60,6 @@ export default function App() {
             <Dropdown.Menu
               aria-label='Rivers'
               css={{
-                marginRight: '15px',
                 $$dropdownMenuWidth: '400px',
                 $$dropdownItemHeight: '60px',
                 '& .nextui-dropdown-item': {
@@ -82,22 +81,22 @@ export default function App() {
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item
-                key='contact_us'
-                showFullDescription
-                description='Have a question about fishing or just want to say hi? We’d love to hear from you. Drop us a line and we will respond as soon as possible.'>
-                <NavLink className='clickableArea navLink' to='/contact'>
-                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
-                    Contact Us
-                  </Text>
-                </NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item
                 key='trip_details'
                 showFullDescription
                 description='Ready to start researching your next unforgettable trip to Teton Valley Lodge? Click here!'>
                 <NavLink className='clickableArea navLink' to='/trip-details'>
                   <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
                     Trip Details
+                  </Text>
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item
+                key='contact_us'
+                showFullDescription
+                description='Have a question about fishing or just want to say hi? We’d love to hear from you. Drop us a line and we will respond as soon as possible.'>
+                <NavLink className='clickableArea navLink' to='/contact'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Contact Us
                   </Text>
                 </NavLink>
               </Dropdown.Item>
@@ -123,7 +122,6 @@ export default function App() {
             <Dropdown.Menu
               aria-label='Rivers'
               css={{
-                marginRight: '15px',
                 $$dropdownMenuWidth: '400px',
                 $$dropdownItemHeight: '60px',
                 '& .nextui-dropdown-item': {
@@ -139,35 +137,47 @@ export default function App() {
                 key='teton_river'
                 showFullDescription
                 description='The Teton is more than just a river to us, it is part of everything we are.'>
-                Teton River
+                <NavLink className='clickableArea navLink' to='/teton'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Teton River
+                  </Text>
+                </NavLink>
               </Dropdown.Item>
               <Dropdown.Item
                 key='south_fork'
                 showFullDescription
                 description='If you could only fish one river the rest of your life, the South Fork of the Snake would be the river to select.'>
-                South Fork
+                <NavLink className='clickableArea navLink' to='/south-fork'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    South Fork
+                  </Text>
+                </NavLink>
               </Dropdown.Item>
               <Dropdown.Item
                 key='henrys_fork'
                 showFullDescription
                 description='At six thousand feet above sea-level, Henry’s Fork flows out of a spring created by volcanic events more than a millennium ago.'>
-                Henry's Fork
+                <NavLink className='clickableArea navLink' to='/henrys-fork'>
+                  <Text css={{ color: '#F75A0D', margin: '0', padding: '0' }}>
+                    Henry's Fork
+                  </Text>
+                </NavLink>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Navbar.Link isActive href='#'>
+          <Navbar.Link href='/guides'>
             <Text css={{ fontWeight: 700, color: '#506A63' }}>
               MEET OUR GUIDES
             </Text>
           </Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
-          <Navbar.Link hideIn={'sm'}>
+          {/* <Navbar.Link hideIn={'sm'}>
             <SlPhone style={{ paddingRight: '5px', color: '#506A63' }} />
             <Text css={{ fontWeight: 700, color: '#506A63' }}>
               208-354-2386
             </Text>
-          </Navbar.Link>
+          </Navbar.Link> */}
           <Navbar.Item>
             <Button
               auto
