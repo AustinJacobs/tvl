@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css';
 import Header from '../src/components/Header';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -12,6 +11,7 @@ import SouthFork from './components/rivers/SouthFork';
 import HenrysFork from './components/rivers/HenrysFork';
 import Guides from './components/Guides';
 import GlobalStyles from './components/styles/GlobalStyles';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +29,7 @@ root.render(
         <Route path='/henrys-fork' element={<HenrysFork />} />
         <Route path='/guides' element={<Guides />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );
