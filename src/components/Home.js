@@ -1,30 +1,41 @@
 import React from 'react';
 // import HeroVideo from '../assets/HeroVideo.mp4';
 import HeroVideoContainer from './styles/HeroVideoContainer';
-import { Modal, Button, Text } from '@nextui-org/react';
+import { Button, Text, Container, Link } from '@nextui-org/react';
 import { motion } from 'framer-motion';
-import '../components/styles/Home.css'
+import '../components/styles/Home.css';
 
 export default function Home() {
-  const [visible, setVisible] = React.useState(false);
-  const handler = () => setVisible(true);
-  const closeHandler = () => {
-    setVisible(false);
-    console.log('closed');
-  };
   return (
     <>
       <HeroVideoContainer>
         <video autoPlay loop muted width='100%' height='100%'>
           {/* <source src={HeroVideo} type='video/mp4' /> */}
         </video>
-        <div className='heroVideoOverlay'>
-          <div className='heroVideoBox'>
+        <Container className='heroVideoOverlay'>
+          <Container
+            css={{
+              marginLeft: '-.5em',
+              marginTop: '14em',
+              padding: '0',
+              '@xs': {
+                marginLeft: '1.5em',
+                marginTop: '15em',
+              },
+            }}>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 2 } }}
               viewport={{ once: true }}>
-              <Text h1 className='heroVideoTitleOne'>
+              <Text
+                h1
+                css={{
+                  color: '#ffffff',
+                  fontSize: '50px',
+                  '@xs': {
+                    fontSize: '60px',
+                  },
+                }}>
                 TETON VALLEY LODGE
               </Text>
             </motion.div>
@@ -32,50 +43,45 @@ export default function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 2 } }}
               viewport={{ once: true }}>
-              <Text h1 className='heroVideoTitleTwo'>
+              <Text
+                h1
+                css={{
+                  color: '#f75a0e',
+                  fontSize: '30px',
+                  '@xs': {
+                    fontSize: '40px',
+                    width: '500px',
+                  },
+                }}>
                 YOUR IDEAL FLY FISHING VACATION
               </Text>
             </motion.div>
 
-            <div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1, transition: { duration: 2 } }}
-                viewport={{ once: true }}>
-                <Button
-                  className='heroVideoButton'
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { duration: 2 } }}
+              viewport={{ once: true }}>
+              <Button
+                css={{
+                  backgroundColor: '#F75A0E',
+                  height: '50px',
+                  marginTop: '1.5em',
+                }}
+                as={Link}
+                href='/book-now'>
+                <Text
+                  h1
                   css={{
-                    backgroundColor: '#F75A0E',
-                    width: '200px',
-                    height: '50px',
-                  }}
-                  onPress={handler}>
-                  <Text
-                    h1
-                    css={{
-                      color: '#FFFFFF',
-                      fontFamily: 'Roboto Condensed',
-                      fontSize: '16px',
-                    }}>
-                    WATCH VIDEO
-                  </Text>
-                </Button>
-              </motion.div>
-              <Modal
-                closeButton
-                blur
-                aria-labelledby='modal-title'
-                open={visible}
-                onClose={closeHandler}
-                css={{ backgroundColor: '#181617' }}>
-                <Modal.Header></Modal.Header>
-                <Modal.Body>
-                  {/*Add Modal content here */}</Modal.Body>
-                <Modal.Footer></Modal.Footer>
-              </Modal>
-            </div>
-          </div>
-        </div>
+                    color: '#FFFFFF',
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: '18px',
+                  }}>
+                  BOOK NOW
+                </Text>
+              </Button>
+            </motion.div>
+          </Container>
+        </Container>
       </HeroVideoContainer>
     </>
   );

@@ -1,0 +1,18 @@
+.greenText {
+  color: #001c17;
+}
+
+.developerTag {
+  color: #ffffff;
+}
+
+.developerTag:hover {
+  color: #F75A0E;
+}
+
+.verticalBreak {
+  border-left: 1px solid #ffffff;
+  height: 10px;
+  margin-right: .5em;
+  margin-left: .5em;
+}

@@ -4,34 +4,27 @@ import { Layout } from '../components/styles/Layout';
 import { icons } from '../assets/Icons';
 import Logo from '../assets/tvl_logo.png';
 import { SlPhone } from 'react-icons/sl';
+import { collapseItems } from '../data/navData';
 
 export default function App() {
-  const collapseItems = ['Customers', 'Pricing', 'Company'];
-
   return (
     <Layout>
       <Navbar variant='sticky' maxWidth='fluid' disableBlur>
-        <Navbar.Toggle showIn='xs' />
+        <Navbar.Toggle
+          css={{ position: 'absolute', right: '20px' }}
+          showIn='xs'
+        />
         <Navbar.Brand
           css={{
+            width: '50px',
+            position: 'absolute',
+            left: '20px',
             '@xs': {
-              w: '8%',
-            },
-            '@sm': {
-              w: '7%',
-            },
-            '@md': {
-              w: '6%',
-            },
-            '@lg': {
-              w: '4%',
-            },
-            '@xl': {
-              w: '2%',
+              position: 'relative',
             },
           }}>
           <NavLink to='/'>
-            <Image src={Logo} alt='TVL Fish Logo' />
+            <Image className='headerLogo' src={Logo} alt='TVL Fish Logo' />
           </NavLink>
         </Navbar.Brand>
         <Navbar.Content
@@ -183,7 +176,13 @@ export default function App() {
               auto
               as={Link}
               href='/book-now'
-              css={{ backgroundColor: '#F75A0D' }}>
+              css={{
+                backgroundColor: '#F75A0D',
+                display: 'none',
+                '@xs': {
+                  display: 'block',
+                },
+              }}>
               <Text css={{ fontWeight: 700, color: '#FFFFFF' }}>BOOK NOW</Text>
             </Button>
           </Navbar.Item>
@@ -191,7 +190,7 @@ export default function App() {
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
-              key={item}
+              key={index}
               css={{
                 // Hamburger menu color
                 color: '#001C17',
@@ -201,8 +200,8 @@ export default function App() {
                 css={{
                   minWidth: '100%',
                 }}
-                href='#'>
-                {item}
+                href={item.link}>
+                {item.title}
               </Link>
             </Navbar.CollapseItem>
           ))}
