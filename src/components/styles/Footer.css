@@ -7,12 +7,26 @@
 }
 
 .developerTag:hover {
-  color: #F75A0E;
+  color: #f75a0e;
 }
 
 .verticalBreak {
   border-left: 1px solid #ffffff;
   height: 10px;
-  margin-right: .5em;
-  margin-left: .5em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+.footerLink {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.developerLink {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.developerLink:hover {
+  color: #f75a0e;
 }

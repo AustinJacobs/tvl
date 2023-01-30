@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Grid from '../components/styles/Grid';
-import { Container, Image, Link, Text } from '@nextui-org/react';
+import { Image, Text, Button } from '@nextui-org/react';
 import Logo from '../assets/tvl_logo_bw.png';
 import '../components/styles/Footer.css';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import {
   compose,
@@ -37,96 +38,160 @@ const FooterHr = styled.div`
   margin-bottom: 0.5em;
 `;
 
+const LinkContainer = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+`;
+
+const FooterGridTop = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 1/2;
+  justify-items: center;
+  background-color: #888667;
+
+  @media only screen and (min-width: 650px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`;
+
+const FooterGridBottom = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  grid-row: 2/3;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #181617;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  line-height: 1.5;
+  font-size: 14px;
+`;
+
+const FooterLogoDiv = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  align-self: center;
+  margin-top: 2em;
+
+  @media only screen and (min-width: 650px) {
+    margin-top: 0;
+  }
+`;
+
+const FooterButtonDiv = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  align-self: center;
+  margin-bottom: 2em;
+
+  @media only screen and (min-width: 650px) {
+    margin-bottom: 0;
+  }
+`;
+
+const FooterSocialDiv = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 50px 50px;
+  margin: 0 auto;
+  justify-items: center;
+  margin-top: 1em;
+`;
+
 export default function Footer() {
   const current = new Date();
   const date = current.getFullYear();
 
   return (
     <FooterWrapper>
-      <Container
-        fluid
-        css={{
-          backgroundColor: '#888667',
-          paddingTop: '2em',
-          paddingBottom: '2em',
-          margin: '0',
-        }}>
-        <Grid
-          gridTemplateColumns='1fr'
-          gridRow='1/2'
-          style={{ justifyItems: 'center' }}>
-          <Image width={100} src={Logo} alt='Default Image' />
-          <Text
-            css={{
-              marginTop: '1em',
-              fontWeight: 700,
-              color: '#FFFFFF',
-              fontSize: '20px',
-              textAlign: 'center',
-            }}>
-            Drop Us A Line
-          </Text>
-          <FooterHr />
-          <Text
-            css={{
-              fontWeight: 700,
-              color: '#FFFFFF',
-              textAlign: 'center',
-              marginBottom: '.5em',
-            }}>
-            208-354-2386
-          </Text>
-          <Text
-            css={{
-              fontWeight: 700,
-              color: '#FFFFFF',
-              textAlign: 'center',
-              marginBottom: '.5em',
-            }}>
-            <Link
-              css={{ color: '#FFFFFF' }}
-              href='https://www.google.com/maps/place/3733+Adams+Rd,+Driggs,+ID+83422/@43.6691139,-111.1688596,17z/data=!4m6!3m5!1s0x53539f51a6eba411:0x7aeb1ff14a94a084!8m2!3d43.6691139!4d-111.1688596!16s%2Fg%2F11g0ljjfdc'>
-              3733 Adams Rd, Driggs, ID 83422
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 2 } }}
+        viewport={{ once: true }}>
+        <FooterGridTop>
+          <FooterLogoDiv>
+            <Link to='/'>
+              <Image width='150px' src={Logo} alt='Black and White Fish Logo' />
             </Link>
-          </Text>
-          <Grid
-            gridTemplateColumns='1fr 1fr'
-            style={{
-              width: '100px',
-              alignSelf: 'center',
-              justifyItems: 'center',
-              marginTop: '1em',
-            }}>
-            <FaInstagram fontSize='25px' color='#FFFFFF' />
-            <FaFacebook fontSize='25px' color='#FFFFFF' />
-          </Grid>
-        </Grid>
-      </Container>
-      <Container
-        fluid
-        css={{
-          backgroundColor: '#001C17',
-          paddingBottom: '1em',
-          paddingTop: '1em',
-          margin: '0',
-        }}>
-        <Grid gridTemplateColumns='1fr' gridRow='2/3' style={{ width: '100%' }}>
-          <Container>
-            <Text
-              css={{
-                color: '#FFFFFF',
-                fontSize: '14px',
-                textAlign: 'center',
-              }}>
-              © {date} Teton Valley Lodge<span className='verticalBreak'></span>
-              Website by <span> </span>
-              <Link target='_blank' className='developerTag' href='https://austintjacobs.com/'>
-                Austin Jacobs
-              </Link>
+          </FooterLogoDiv>
+          <LinkContainer>
+            <Text h1 css={{ fontSize: '30px', color: '#FFFFFF' }}>
+              Drop Us A Line
             </Text>
-          </Container>
-        </Grid>
-      </Container>
+            <FooterHr />
+            <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
+              3733 Adams Rd, Driggs, ID 83422
+            </Text>
+            <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
+              +1 208-354-2386
+            </Text>
+            <FooterSocialDiv>
+              <a
+                className='developerLink'
+                rel='noreferrer'
+                href='https://www.instagram.com/tetonvalleylodge/'
+                target='_blank'>
+                <FaInstagram fontSize={23} />
+              </a>
+
+              <a
+                className='developerLink'
+                rel='noreferrer'
+                href='https://www.facebook.com/tetonvalleylodge/'
+                target='_blank'>
+                <FaFacebook fontSize={23} />
+              </a>
+            </FooterSocialDiv>
+          </LinkContainer>
+          <FooterButtonDiv>
+            <Link className='footerLink' to='/book-now'>
+              <Button
+                css={{
+                  backgroundColor: '#F75A0E',
+                  height: '50px',
+                }}>
+                <Text
+                  h1
+                  css={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: '18px',
+                  }}>
+                  BOOK NOW
+                </Text>
+              </Button>
+            </Link>
+          </FooterButtonDiv>
+        </FooterGridTop>
+      </motion.div>
+      <FooterGridBottom>
+        <Text css={{ color: '#FFFFFF' }}>© {date} Teton Valley Lodge</Text>
+        <Text css={{ color: '#FFFFFF' }}>
+          Website by{' '}
+          <a
+            rel='noreferrer'
+            className='developerLink'
+            href='https://austintjacobs.com/'
+            target='_blank'>
+            Austin Jacobs
+          </a>
+        </Text>
+      </FooterGridBottom>
     </FooterWrapper>
   );
 }

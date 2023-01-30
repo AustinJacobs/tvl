@@ -1,7 +1,7 @@
 import React from 'react';
 // import HeroVideo from '../assets/HeroVideo.mp4';
 import HeroVideoContainer from './styles/HeroVideoContainer';
-import { Button, Text, Container, Link } from '@nextui-org/react';
+import { Button, Text, Container } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 
@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <HeroVideoContainer>
-        <video autoPlay loop muted width='100%' height='100%'>
-          {/* <source src={HeroVideo} type='video/mp4' /> */}
-        </video>
+        {/* <video autoPlay loop muted width='100%' height='100%'>
+          <source src={HeroVideo} type='video/mp4' />
+        </video> */}
         <Container className='heroVideoOverlay'>
           <Container
             css={{
@@ -61,24 +61,28 @@ export default function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 2 } }}
               viewport={{ once: true }}>
-              <Button
-                css={{
-                  backgroundColor: '#F75A0E',
-                  height: '50px',
-                  marginTop: '1.5em',
-                }}
-                as={Link}
-                href='/book-now'>
-                <Text
-                  h1
+              <a
+                rel='noreferrer'
+                className='link'
+                target='_blank'
+                href='https://www.youtube.com/watch?v=uHySrFlywDc'>
+                <Button
                   css={{
-                    color: '#FFFFFF',
-                    fontFamily: 'Roboto Condensed',
-                    fontSize: '18px',
+                    backgroundColor: '#F75A0E',
+                    height: '50px',
+                    marginTop: '1.5em',
                   }}>
-                  BOOK NOW
-                </Text>
-              </Button>
+                  <Text
+                    h1
+                    css={{
+                      color: '#FFFFFF',
+                      fontFamily: 'Roboto Condensed',
+                      fontSize: '18px',
+                    }}>
+                    WATCH VIDEO
+                  </Text>
+                </Button>
+              </a>
             </motion.div>
           </Container>
         </Container>

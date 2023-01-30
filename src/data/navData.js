@@ -4,7 +4,7 @@ export const collapseItems = [
     link: '/',
   },
   {
-    title: 'Book Now',
+    title: 'Book Your Trip',
     link: '/book-now',
   },
   {

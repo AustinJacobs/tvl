@@ -11,8 +11,9 @@ import {
 
 const HeroVideoContainer = styled.div`
   ${compose(color, shadow, space, border, typography, layout)}
-    width: 100%;
-    height: 80vh;
+  
+  width: 100%;
+  height: 80vh;
 `;
 
 export default HeroVideoContainer;
