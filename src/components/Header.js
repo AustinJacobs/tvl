@@ -177,7 +177,7 @@ export default function App() {
               as={Link}
               href='/book-now'
               css={{
-                backgroundColor: '#F75A0D',
+                backgroundColor: '#F75A0E',
                 display: 'none',
                 '@xs': {
                   display: 'block',

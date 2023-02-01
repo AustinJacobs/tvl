@@ -73,6 +73,30 @@ video {
   align-items: center;
 }
 
+.headline {
+  color: #888667;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.subheading {
+  color: #181617;
+  font-family: 'Lora', serif;
+}
+
+.paragraph {
+  color: #181617;
+  font-family: 'Lora', serif;
+}
+
+.container {
+  margin: 2em;
+
+  @media only screen and (min-width: 650px) {
+    margin: 4em;
+  }
+}
+
 
 `;
 

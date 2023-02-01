@@ -47,7 +47,7 @@ export default function HenrysFork() {
               <Text
                 h1
                 css={{
-                  color: '#f75a0e',
+                  color: '#F75A0E',
                   fontSize: '30px',
                   '@xs': {
                     fontSize: '40px',
