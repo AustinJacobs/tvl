@@ -7,6 +7,8 @@ import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
 import styled from 'styled-components';
 import Fish from '../assets/fish_water.jpeg';
+import BWTVL from '../assets/tvl_logo_bw.png';
+
 import {
   compose,
   color,
@@ -22,6 +24,7 @@ const HomeGrid = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 6em;
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -149,7 +152,7 @@ export default function Home() {
             from spring creek to rushing rapids.
           </Text>
         </div>
-        <Image
+        {/* <Image
           css={{
             width: '300px',
             margin: '0 auto',
@@ -158,9 +161,268 @@ export default function Home() {
             },
           }}
           src={Fish}
-          alt='Marilyn Monroe Potato Sack with Fish'
-        />
+          alt='Fish swimming under the water.'
+        /> */}
+        {/* <div className='hexGrid'>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+          <div className='hexGridItem'>
+            <Image className='hexImage' />
+          </div>
+        </div> */}
+        <div className='main'>
+          <div className='hexContainer'>
+            <img className='hexImage' src={Fish} alt='fish'></img>
+            <img className='hexImage' src={Fish} alt='fish'></img>
+            <img className='hexImage' src={Fish} alt='fish'></img>
+            <img className='hexImage' src={Fish} alt='fish'></img>
+          </div>
+        </div>
       </HomeGrid>
+      <HomeGridTwo>
+        <div className='container home-mountain-overlay centered-in-grid'>
+          <Text
+            className='headline-centered'
+            css={{
+              fontSize: '40px',
+              '@xs': {
+                fontSize: '60px',
+              },
+            }}>
+            Sit Back and Relax
+          </Text>
+          <Text
+            className='subheading-centered'
+            css={{
+              fontSize: '20px',
+              '@xs': {
+                fontSize: '25px',
+              },
+            }}>
+            We've Got You Covered
+          </Text>
+          <HorizontalRule className='hr-centered' />
+          <Text
+            className='paragraph-centered'
+            css={{
+              width: '100%',
+              margin: '0 auto',
+              '@xs': {
+                width: '300px',
+              },
+              '@sm': {
+                width: '450px',
+              },
+            }}>
+            With over 100 years in the industry, we know just what is needed for
+            an excellent experience on these waters. We offer packages and
+            services that will accommodate everyone in your group.
+          </Text>
+        </div>
+        <CardsGrid>
+          <div>
+            <Card css={{ w: '100%', h: '400px' }}>
+              <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text
+                    size={12}
+                    weight='bold'
+                    transform='uppercase'
+                    color='#ffffffAA'>
+                    New
+                  </Text>
+                  <Text h3 color='black'>
+                    Acme camera
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body css={{ p: 0 }}>
+                <Card.Image
+                  src='https://nextui.org/images/card-example-6.jpeg'
+                  width='100%'
+                  height='100%'
+                  objectFit='cover'
+                  alt='Card example background'
+                />
+              </Card.Body>
+              <Card.Footer
+                isBlurred
+                css={{
+                  position: 'absolute',
+                  bgBlur: '#ffffff66',
+                  borderTop:
+                    '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                  bottom: 0,
+                  zIndex: 1,
+                }}>
+                <Row>
+                  <Col>
+                    <Text color='#000' size={12}>
+                      Available soon.
+                    </Text>
+                    <Text color='#000' size={12}>
+                      Get notified.
+                    </Text>
+                  </Col>
+                  <Col>
+                    <Row justify='flex-end'>
+                      <Button flat auto rounded color='secondary'>
+                        <Text
+                          css={{ color: 'inherit' }}
+                          size={12}
+                          weight='bold'
+                          transform='uppercase'>
+                          Notify Me
+                        </Text>
+                      </Button>
+                    </Row>
+                  </Col>
+                </Row>
+              </Card.Footer>
+            </Card>
+          </div>
+
+          <div>
+            <Card css={{ w: '100%', h: '400px' }}>
+              <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text
+                    size={12}
+                    weight='bold'
+                    transform='uppercase'
+                    color='#ffffffAA'>
+                    New
+                  </Text>
+                  <Text h3 color='black'>
+                    Acme camera
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body css={{ p: 0 }}>
+                <Card.Image
+                  src='https://nextui.org/images/card-example-6.jpeg'
+                  width='100%'
+                  height='100%'
+                  objectFit='cover'
+                  alt='Card example background'
+                />
+              </Card.Body>
+              <Card.Footer
+                isBlurred
+                css={{
+                  position: 'absolute',
+                  bgBlur: '#ffffff66',
+                  borderTop:
+                    '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                  bottom: 0,
+                  zIndex: 1,
+                }}>
+                <Row>
+                  <Col>
+                    <Text color='#000' size={12}>
+                      Available soon.
+                    </Text>
+                    <Text color='#000' size={12}>
+                      Get notified.
+                    </Text>
+                  </Col>
+                  <Col>
+                    <Row justify='flex-end'>
+                      <Button flat auto rounded color='secondary'>
+                        <Text
+                          css={{ color: 'inherit' }}
+                          size={12}
+                          weight='bold'
+                          transform='uppercase'>
+                          Notify Me
+                        </Text>
+                      </Button>
+                    </Row>
+                  </Col>
+                </Row>
+              </Card.Footer>
+            </Card>
+          </div>
+
+          <div>
+            <Card css={{ w: '100%', h: '400px' }}>
+              <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text
+                    size={12}
+                    weight='bold'
+                    transform='uppercase'
+                    color='#ffffffAA'>
+                    New
+                  </Text>
+                  <Text h3 color='black'>
+                    Acme camera
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body css={{ p: 0 }}>
+                <Card.Image
+                  src='https://nextui.org/images/card-example-6.jpeg'
+                  width='100%'
+                  height='100%'
+                  objectFit='cover'
+                  alt='Card example background'
+                />
+              </Card.Body>
+              <Card.Footer
+                isBlurred
+                css={{
+                  position: 'absolute',
+                  bgBlur: '#ffffff66',
+                  borderTop:
+                    '$borderWeights$light solid rgba(255, 255, 255, 0.2)',
+                  bottom: 0,
+                  zIndex: 1,
+                }}>
+                <Row>
+                  <Col>
+                    <Text color='#000' size={12}>
+                      Available soon.
+                    </Text>
+                    <Text color='#000' size={12}>
+                      Get notified.
+                    </Text>
+                  </Col>
+                  <Col>
+                    <Row justify='flex-end'>
+                      <Button flat auto rounded color='secondary'>
+                        <Text
+                          css={{ color: 'inherit' }}
+                          size={12}
+                          weight='bold'
+                          transform='uppercase'>
+                          Notify Me
+                        </Text>
+                      </Button>
+                    </Row>
+                  </Col>
+                </Row>
+              </Card.Footer>
+            </Card>
+          </div>
+        </CardsGrid>
+      </HomeGridTwo>
     </>
   );
 }

@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
 }
 
 .navLink:visited {
@@ -84,9 +85,31 @@ video {
   font-family: 'Lora', serif;
 }
 
+<<<<<<< HEAD
+.subheading-centered {
+  color: #181617;
+  font-family: 'Lora', serif;
+  text-align: center;
+}
+
+.hr-centered {
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .paragraph {
   color: #181617;
   font-family: 'Lora', serif;
+}
+
+.paragraph-centered {
+=======
+.paragraph {
+>>>>>>> parent of 9285e7a (Home page additions and footer addition.)
+  color: #181617;
+  font-family: 'Lora', serif;
+  text-align: center;
 }
 
 .container {
@@ -97,6 +120,9 @@ video {
   }
 }
 
+.centered-in-grid {
+  grid-column: 1/3;
+}
 
 `;
 

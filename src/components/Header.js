@@ -6,7 +6,7 @@ import Logo from '../assets/tvl_logo.png';
 import { SlPhone } from 'react-icons/sl';
 import { collapseItems } from '../data/navData';
 
-export default function App() {
+export default function Header() {
   return (
     <Layout>
       <Navbar variant='sticky' maxWidth='fluid' disableBlur>

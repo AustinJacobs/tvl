@@ -3,6 +3,145 @@
   grid-row: 2/3;
 }
 
-.second-p {
-  grid-column: 2/3;
+.home-mountain-overlay {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  z-index: 3;
+}
+
+/* .hexGrid {
+  padding: 60px;
+  margin: 0 auto;
+  min-width: 1200px;
+  max-width: 1200px;
+}
+
+.hexGridItem {
+  position: relative;
+  margin-top: -90px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: calc(33.33% - 10px);
+  float: left;
+  transition: all 0.5s;
+
+  overflow: hidden;
+
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  -webkit-shape-outside: polygon(
+    50% 0,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  );
+}
+
+.hexGridItem:before {
+  display: block;
+  padding-top: 112.5%;
+  content: '';
+}
+
+.hexGridItem:nth-child(1),
+.hexGridItem:nth-child(2) {
+  margin-top: 0;
+}
+
+.hexGridItem:nth-child(7n - 1),
+.hexGridItem:nth-child(1) {
+  margin-left: 185px;
+}
+
+.hexImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=49dab7a5e4b2e28b5707bc2db974c94b);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hexImage:before,
+.hexImage:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hexImage:before {
+  background: rgba(purple, 0.25);
+}
+
+.hexImage:after {
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(black, 0.5),
+    transparent
+  );
+} */
+
+.main {
+  display: flex;
+  --s: 250px; /* size  */
+  --m: 4px; /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    --s: 100px; /* size  */
+    margin-top: 30px;
+  }
+
+  .hexImage:nth-of-type(4) {
+    display: none;
+  }
+}
+
+.hexContainer {
+  font-size: 0; /*disable white space between inline block element */
+}
+
+.hexContainer img {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+}
+.hexContainer img:nth-child(odd) {
+  background-position: center center;
+  background-size: cover;
+}
+.hexContainer::before {
+  content: '';
+  width: calc(var(--s) / 2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--f) - 3px),
+    #000 0 var(--f)
+  );
 }

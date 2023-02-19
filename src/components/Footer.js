@@ -59,7 +59,7 @@ const FooterGridTop = styled.div`
   grid-template-columns: 1fr;
   grid-row: 1/2;
   justify-items: center;
-  background-color: #888667;
+  background-color: #181617;
 
   @media only screen and (min-width: 650px) {
     grid-template-columns: 1fr 1fr 1fr;
