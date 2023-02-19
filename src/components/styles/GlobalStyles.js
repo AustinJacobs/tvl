@@ -80,12 +80,18 @@ video {
   font-weight: 700;
 }
 
+.headline-centered {
+  color: #888667;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
 .subheading {
   color: #181617;
   font-family: 'Lora', serif;
 }
 
-<<<<<<< HEAD
 .subheading-centered {
   color: #181617;
   font-family: 'Lora', serif;
@@ -104,9 +110,6 @@ video {
 }
 
 .paragraph-centered {
-=======
-.paragraph {
->>>>>>> parent of 9285e7a (Home page additions and footer addition.)
   color: #181617;
   font-family: 'Lora', serif;
   text-align: center;

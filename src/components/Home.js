@@ -1,7 +1,15 @@
 import React from 'react';
-// import HeroVideo from '../assets/HeroVideo.mp4';
+import HeroVideo from '../assets/HeroVideo.mp4';
 import HeroVideoContainer from './styles/HeroVideoContainer';
-import { Button, Text, Container, Image } from '@nextui-org/react';
+import {
+  Button,
+  Text,
+  Container,
+  Image,
+  Card,
+  Col,
+  Row,
+} from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
@@ -28,7 +36,34 @@ const HomeGrid = styled.div`
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-row: 1fr 1fr;
+  }
+`;
+
+const HomeGridTwo = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const CardsGrid = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  gap: 6em;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4em;
+
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
@@ -36,9 +71,9 @@ export default function Home() {
   return (
     <>
       <HeroVideoContainer>
-        {/* <video autoPlay loop muted width='100%' height='100%'>
+        <video autoPlay loop muted width='100%' height='100%'>
           <source src={HeroVideo} type='video/mp4' />
-        </video> */}
+        </video>
         <Container className='heroVideoOverlay'>
           <Container
             css={{
@@ -98,6 +133,7 @@ export default function Home() {
                     backgroundColor: '#F75A0E',
                     height: '50px',
                     marginTop: '1.5em',
+                    borderRadius: '8px',
                   }}>
                   <Text
                     h1
