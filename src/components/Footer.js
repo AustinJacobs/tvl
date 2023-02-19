@@ -119,66 +119,66 @@ export default function Footer() {
 
   return (
     <FooterWrapper>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 2 } }}
-        viewport={{ once: true }}>
-        <FooterGridTop>
-          <FooterLogoDiv>
-            <Link to='/'>
-              <Image width='150px' src={Logo} alt='Black and White Fish Logo' />
-            </Link>
-          </FooterLogoDiv>
-          <LinkContainer>
-            <Text h1 css={{ fontSize: '30px', color: '#FFFFFF' }}>
-              Drop Us A Line
-            </Text>
-            <FooterHr />
-            <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
-              3733 Adams Rd, Driggs, ID 83422
-            </Text>
-            <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
-              +1 208-354-2386
-            </Text>
-            <FooterSocialDiv>
-              <a
-                className='developerLink'
-                rel='noreferrer'
-                href='https://www.instagram.com/tetonvalleylodge/'
-                target='_blank'>
-                <FaInstagram fontSize={23} />
-              </a>
+        viewport={{ once: true }}> */}
+      <FooterGridTop>
+        <FooterLogoDiv>
+          <Link to='/'>
+            <Image width='150px' src={Logo} alt='Black and White Fish Logo' />
+          </Link>
+        </FooterLogoDiv>
+        <LinkContainer>
+          <Text h1 css={{ fontSize: '30px', color: '#FFFFFF' }}>
+            Drop Us A Line
+          </Text>
+          <FooterHr />
+          <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
+            3733 Adams Rd, Driggs, ID 83422
+          </Text>
+          <Text css={{ fontSize: '18px', color: '#FFFFFF' }}>
+            +1 208-354-2386
+          </Text>
+          <FooterSocialDiv>
+            <a
+              className='developerLink'
+              rel='noreferrer'
+              href='https://www.instagram.com/tetonvalleylodge/'
+              target='_blank'>
+              <FaInstagram fontSize={23} />
+            </a>
 
-              <a
-                className='developerLink'
-                rel='noreferrer'
-                href='https://www.facebook.com/tetonvalleylodge/'
-                target='_blank'>
-                <FaFacebook fontSize={23} />
-              </a>
-            </FooterSocialDiv>
-          </LinkContainer>
-          <FooterButtonDiv>
-            <Link className='footerLink' to='/book-now'>
-              <Button
+            <a
+              className='developerLink'
+              rel='noreferrer'
+              href='https://www.facebook.com/tetonvalleylodge/'
+              target='_blank'>
+              <FaFacebook fontSize={23} />
+            </a>
+          </FooterSocialDiv>
+        </LinkContainer>
+        <FooterButtonDiv>
+          <Link className='footerLink' to='/book-now'>
+            <Button
+              css={{
+                backgroundColor: '#F75A0E',
+                height: '50px',
+              }}>
+              <Text
+                h1
                 css={{
-                  backgroundColor: '#F75A0E',
-                  height: '50px',
+                  color: '#FFFFFF',
+                  fontFamily: 'Roboto Condensed',
+                  fontSize: '18px',
                 }}>
-                <Text
-                  h1
-                  css={{
-                    color: '#FFFFFF',
-                    fontFamily: 'Roboto Condensed',
-                    fontSize: '18px',
-                  }}>
-                  BOOK NOW
-                </Text>
-              </Button>
-            </Link>
-          </FooterButtonDiv>
-        </FooterGridTop>
-      </motion.div>
+                BOOK NOW
+              </Text>
+            </Button>
+          </Link>
+        </FooterButtonDiv>
+      </FooterGridTop>
+      {/* </motion.div> */}
       <FooterGridBottom>
         <Text css={{ color: '#FFFFFF' }}>© {date} Teton Valley Lodge</Text>
         <Text css={{ color: '#FFFFFF' }}>

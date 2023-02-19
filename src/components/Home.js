@@ -14,8 +14,12 @@ import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
 import styled from 'styled-components';
-import Fish from '../assets/fish_water.jpeg';
-import BWTVL from '../assets/tvl_logo_bw.png';
+import ImageOne from '../assets/home/boat-cast.jpg';
+import ImageTwo from '../assets/home/brian-jo.jpg';
+import ImageThree from '../assets/home/show-fish.jpg';
+import ImageFour from '../assets/home/action-boat-cast.jpg';
+import ImageFive from '../assets/home/tackle-overhead.jpg';
+import ImageSix from '../assets/home/boat-roundup-overhead.jpg';
 
 import {
   compose,
@@ -32,10 +36,11 @@ const HomeGrid = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 6em;
+  margin-top: 2em;
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 4em;
   }
 `;
 
@@ -44,9 +49,11 @@ const HomeGridTwo = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 2em;
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 4em;
   }
 `;
 
@@ -57,10 +64,10 @@ const CardsGrid = styled.div`
   grid-template-columns: 1fr;
   grid-column: 1/3;
   grid-row: 2/3;
-  gap: 6em;
+  gap: 4em;
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -222,12 +229,25 @@ export default function Home() {
             <Image className='hexImage' />
           </div>
         </div> */}
-        <div className='main'>
-          <div className='hexContainer'>
-            <img className='hexImage' src={Fish} alt='fish'></img>
-            <img className='hexImage' src={Fish} alt='fish'></img>
-            <img className='hexImage' src={Fish} alt='fish'></img>
-            <img className='hexImage' src={Fish} alt='fish'></img>
+        <div class='container-collage'>
+          <div class='big-collage'>
+            <img src={ImageTwo} alt='' />
+          </div>
+          <div class='vertical-collage'>
+            <img src={ImageOne} alt='' />
+          </div>
+          <div class='vertical-collage'>
+            <img src={ImageThree} alt='' />
+          </div>
+          <div>
+            <img src={ImageFive} alt='' />
+          </div>
+
+          <div>
+            <img src={ImageSix} alt='' />
+          </div>
+          <div class='horizontal-collage'>
+            <img src={ImageFour} alt='' />
           </div>
         </div>
       </HomeGrid>
