@@ -115,6 +115,12 @@ video {
   text-align: center;
 }
 
+.paragraph-two {
+  margin-top: 1em;
+  color: #181617;
+  font-family: 'Lora', serif;
+}
+
 .container {
   margin: 2em;
 
@@ -125,6 +131,15 @@ video {
 
 .centered-in-grid {
   grid-column: 1/3;
+}
+
+.card-logo {
+  width: 50px;
+  color: white;
+}
+
+.card-logo-container {
+  align-self: center;
 }
 
 `;

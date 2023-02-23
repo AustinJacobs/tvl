@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { Layout } from '../components/styles/Layout';
 import { icons } from '../assets/Icons';
 import Logo from '../assets/tvl_logo.png';
-import IconOne from '../assets/icons8-fly.png';
 import { collapseItems } from '../data/navData';
 
 export default function Header() {
@@ -67,10 +66,7 @@ export default function Header() {
                 key='book_now'
                 showFullDescription
                 description='The research is done and you ready to book. This is your next step.'>
-                <NavLink
-                  className='clickableArea navLink'
-                  to='/book-now'
-                  icon={IconOne}>
+                <NavLink className='clickableArea navLink' to='/book-now'>
                   <Text
                     css={{
                       color: '#F75A0D',

@@ -14,8 +14,8 @@ const HorizontalRule = styled.div`
 
   border: 2px solid #F75A0E;
   width: 50px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 `;
 
 export default HorizontalRule;

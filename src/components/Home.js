@@ -20,6 +20,10 @@ import ImageThree from '../assets/home/show-fish.jpg';
 import ImageFour from '../assets/home/action-boat-cast.jpg';
 import ImageFive from '../assets/home/tackle-overhead.jpg';
 import ImageSix from '../assets/home/boat-roundup-overhead.jpg';
+import CardOne from '../assets/cards/holding-fish-card-2.jpg';
+import CardTwo from '../assets/cards/guide-card.jpg';
+import CardThree from '../assets/cards/shuttle-request-card.jpg';
+import CardLogo from '../assets/tvl_logo_bw.png';
 
 import {
   compose,
@@ -194,6 +198,15 @@ export default function Home() {
             fly fisherman’s net. The Teton has so many different types of water,
             from spring creek to rushing rapids.
           </Text>
+
+          <Text className='paragraph-two'>
+            Our great grandfather started guiding in 1919. We pride ourselves on
+            the service and high caliber of our fly fishing lodge and dining
+            facilities. We look forward to sharing with you an experience of
+            great lodging, fantastic fly fishing, and breathtaking scenery. This
+            Idaho fly fishing lodge has been family owned and operated for four
+            generations.
+          </Text>
         </div>
         {/* <Image
           css={{
@@ -293,7 +306,7 @@ export default function Home() {
         </div>
         <CardsGrid>
           <div>
-            <Card css={{ w: '100%', h: '400px' }}>
+            <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -301,20 +314,20 @@ export default function Home() {
                     weight='bold'
                     transform='uppercase'
                     color='#ffffffAA'>
-                    New
+                    TVL
                   </Text>
-                  <Text h3 color='black'>
-                    Acme camera
+                  <Text h1 color='#FFFFFF'>
+                    Book Your Fly Fishing Trip
                   </Text>
                 </Col>
               </Card.Header>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                  src='https://nextui.org/images/card-example-6.jpeg'
+                  src={CardOne}
                   width='100%'
                   height='100%'
                   objectFit='cover'
-                  alt='Card example background'
+                  alt='Fishing guide holding a fish towards the camera.'
                 />
               </Card.Body>
               <Card.Footer
@@ -328,23 +341,26 @@ export default function Home() {
                   zIndex: 1,
                 }}>
                 <Row>
-                  <Col>
-                    <Text color='#000' size={12}>
-                      Available soon.
-                    </Text>
-                    <Text color='#000' size={12}>
-                      Get notified.
-                    </Text>
+                  <Col className='card-logo-container'>
+                    <img
+                      src={CardLogo}
+                      className='card-logo'
+                      alt='Teton Valley Fishing Lodge Black and White Logo'
+                    />
                   </Col>
                   <Col>
                     <Row justify='flex-end'>
-                      <Button flat auto rounded color='secondary'>
+                      <Button
+                        flat
+                        auto
+                        rounded
+                        css={{ backgroundColor: '#F75A0E' }}>
                         <Text
-                          css={{ color: 'inherit' }}
+                          css={{ color: '#FFFFFF' }}
                           size={12}
                           weight='bold'
                           transform='uppercase'>
-                          Notify Me
+                          Book Now
                         </Text>
                       </Button>
                     </Row>
@@ -355,7 +371,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Card css={{ w: '100%', h: '400px' }}>
+            <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -363,16 +379,16 @@ export default function Home() {
                     weight='bold'
                     transform='uppercase'
                     color='#ffffffAA'>
-                    New
+                    TVL
                   </Text>
-                  <Text h3 color='black'>
-                    Acme camera
+                  <Text h1 color='#FFFFFF'>
+                    Request a Shuttle
                   </Text>
                 </Col>
               </Card.Header>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                  src='https://nextui.org/images/card-example-6.jpeg'
+                  src={CardThree}
                   width='100%'
                   height='100%'
                   objectFit='cover'
@@ -390,23 +406,26 @@ export default function Home() {
                   zIndex: 1,
                 }}>
                 <Row>
-                  <Col>
-                    <Text color='#000' size={12}>
-                      Available soon.
-                    </Text>
-                    <Text color='#000' size={12}>
-                      Get notified.
-                    </Text>
+                  <Col className='card-logo-container'>
+                    <img
+                      src={CardLogo}
+                      className='card-logo'
+                      alt='Teton Valley Fishing Lodge Black and White Logo'
+                    />
                   </Col>
                   <Col>
                     <Row justify='flex-end'>
-                      <Button flat auto rounded color='secondary'>
+                      <Button
+                        flat
+                        auto
+                        rounded
+                        css={{ backgroundColor: '#F75A0E' }}>
                         <Text
-                          css={{ color: 'inherit' }}
+                          css={{ color: '#FFFFFF' }}
                           size={12}
                           weight='bold'
                           transform='uppercase'>
-                          Notify Me
+                          Request Now
                         </Text>
                       </Button>
                     </Row>
@@ -417,7 +436,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Card css={{ w: '100%', h: '400px' }}>
+            <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -425,16 +444,16 @@ export default function Home() {
                     weight='bold'
                     transform='uppercase'
                     color='#ffffffAA'>
-                    New
+                    TVL
                   </Text>
-                  <Text h3 color='black'>
-                    Acme camera
+                  <Text h1 color='#FFFFFF'>
+                    Meet Our Guides
                   </Text>
                 </Col>
               </Card.Header>
               <Card.Body css={{ p: 0 }}>
                 <Card.Image
-                  src='https://nextui.org/images/card-example-6.jpeg'
+                  src={CardTwo}
                   width='100%'
                   height='100%'
                   objectFit='cover'
@@ -452,23 +471,26 @@ export default function Home() {
                   zIndex: 1,
                 }}>
                 <Row>
-                  <Col>
-                    <Text color='#000' size={12}>
-                      Available soon.
-                    </Text>
-                    <Text color='#000' size={12}>
-                      Get notified.
-                    </Text>
+                  <Col className='card-logo-container'>
+                    <img
+                      src={CardLogo}
+                      className='card-logo'
+                      alt='Teton Valley Fishing Lodge Black and White Logo'
+                    />
                   </Col>
                   <Col>
                     <Row justify='flex-end'>
-                      <Button flat auto rounded color='secondary'>
+                      <Button
+                        flat
+                        auto
+                        rounded
+                        css={{ backgroundColor: '#F75A0E' }}>
                         <Text
-                          css={{ color: 'inherit' }}
+                          css={{ color: '#FFFFFF' }}
                           size={12}
                           weight='bold'
                           transform='uppercase'>
-                          Notify Me
+                          Visit Page
                         </Text>
                       </Button>
                     </Row>
