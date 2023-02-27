@@ -8,7 +8,7 @@ import { collapseItems } from '../data/navData';
 export default function Header() {
   return (
     <Layout>
-      <Navbar variant='sticky' maxWidth='fluid' disableBlur>
+      <Navbar maxWidth='fluid' disableBlur className='navbar'>
         <Navbar.Toggle
           css={{ position: 'absolute', right: '20px' }}
           showIn='xs'

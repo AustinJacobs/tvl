@@ -10,12 +10,18 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   scroll-behavior: smooth;
+  margin-top: 75px;
 }
 
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
   overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
 }
 
 .navLink:visited {
@@ -53,7 +59,7 @@ video {
 .heroImage {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     object-fit: cover;
 }
 

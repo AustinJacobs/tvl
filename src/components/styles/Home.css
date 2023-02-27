@@ -124,3 +124,14 @@
   grid-column: span 2;
   grid-row: span 2;
 }
+
+.card-lift {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.card-lift:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: translate3d(0px, -2px, 0px);
+}

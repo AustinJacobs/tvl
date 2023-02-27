@@ -14,12 +14,12 @@ import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
 import styled from 'styled-components';
-import ImageOne from '../assets/home/boat-cast.jpg';
-import ImageTwo from '../assets/home/brian-jo.jpg';
-import ImageThree from '../assets/home/show-fish.jpg';
-import ImageFour from '../assets/home/action-boat-cast.jpg';
-import ImageFive from '../assets/home/tackle-overhead.jpg';
-import ImageSix from '../assets/home/boat-roundup-overhead.jpg';
+import ImageOne from '../assets/home/boat-cast-web.jpg';
+import ImageTwo from '../assets/home/brian-jo-web.jpg';
+import ImageThree from '../assets/home/show-fish-web.jpg';
+import ImageFour from '../assets/home/action-boat-cast-web.jpg';
+import ImageFive from '../assets/home/tackle-overhead-web.jpg';
+import ImageSix from '../assets/home/boat-roundup-overhead-web.jpg';
 import CardOne from '../assets/cards/holding-fish-card-2.jpg';
 import CardTwo from '../assets/cards/guide-card.jpg';
 import CardThree from '../assets/cards/shuttle-request-card.jpg';
@@ -242,14 +242,14 @@ export default function Home() {
             <Image className='hexImage' />
           </div>
         </div> */}
-        <div class='container-collage'>
-          <div class='big-collage'>
+        <div className='container-collage'>
+          <div className='big-collage'>
             <img src={ImageTwo} alt='' />
           </div>
-          <div class='vertical-collage'>
+          <div className='vertical-collage'>
             <img src={ImageOne} alt='' />
           </div>
-          <div class='vertical-collage'>
+          <div className='vertical-collage'>
             <img src={ImageThree} alt='' />
           </div>
           <div>
@@ -259,7 +259,7 @@ export default function Home() {
           <div>
             <img src={ImageSix} alt='' />
           </div>
-          <div class='horizontal-collage'>
+          <div className='horizontal-collage'>
             <img src={ImageFour} alt='' />
           </div>
         </div>
@@ -305,7 +305,11 @@ export default function Home() {
           </Text>
         </div>
         <CardsGrid>
-          <div>
+          <motion.div
+            className='card-lift'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true }}>
             <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
@@ -368,9 +372,13 @@ export default function Home() {
                 </Row>
               </Card.Footer>
             </Card>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            className='card-lift'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true }}>
             <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
@@ -433,9 +441,13 @@ export default function Home() {
                 </Row>
               </Card.Footer>
             </Card>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            className='card-lift'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true }}>
             <Card css={{ w: '100%', h: '500px' }}>
               <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                 <Col>
@@ -498,7 +510,7 @@ export default function Home() {
                 </Row>
               </Card.Footer>
             </Card>
-          </div>
+          </motion.div>
         </CardsGrid>
       </HomeGridTwo>
     </>
