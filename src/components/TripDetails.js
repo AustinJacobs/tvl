@@ -21,13 +21,15 @@ const DetailsGrid = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 2em;
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: 2em;
+  width: 90%;
 
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr;
     margin-top: 4em;
+    width: 100%;
   }
 `;
 

@@ -1,17 +1,28 @@
 .pageNav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3em;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.5em;
+
+  /* WHY DOES THE MEDIA QUERY NOT WORK? */
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.5em;
+  }
 }
 
 .packing-btn {
   height: 50px;
+  border-radius: 0;
 }
 
 .day-btn {
   height: 50px;
+  border-radius: 0;
 }
 
 .faq-btn {
   height: 50px;
+  border-radius: 0;
 }

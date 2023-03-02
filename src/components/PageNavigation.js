@@ -17,7 +17,6 @@ export default function PageNavigation() {
           fontWeight: 'bold',
           fontSize: '20px',
           backgroundColor: '#888667',
-          display: 'none',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
@@ -32,7 +31,6 @@ export default function PageNavigation() {
           fontWeight: 'bold',
           fontSize: '20px',
           backgroundColor: '#888667',
-          display: 'none',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
@@ -47,7 +45,6 @@ export default function PageNavigation() {
           fontWeight: 'bold',
           fontSize: '20px',
           backgroundColor: '#888667',
-          display: 'none',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
