@@ -59,7 +59,7 @@ video {
 .heroImage {
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
     object-fit: cover;
 }
 

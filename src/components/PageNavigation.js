@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navbar, Link, Dropdown, Image, Text, Button } from '@nextui-org/react';
 import '../components/styles/PageNavigation.css';
 
 export default function PageNavigation() {
@@ -10,19 +11,51 @@ export default function PageNavigation() {
 
   return (
     <div className='pageNav'>
-      <h1>Button Content Example</h1>
-      <button onClick={() => handleButtonClick('Button 1 content')}>
-        Button 1
-      </button>
-      <button onClick={() => handleButtonClick('Button 2 content')}>
-        Button 2
-      </button>
-      <button onClick={() => handleButtonClick('Button 3 content')}>
-        Button 3
-      </button>
-      <button onClick={() => handleButtonClick('Button 4 content')}>
-        Button 4
-      </button>
+      <Button
+        className='packing-btn'
+        css={{
+          fontWeight: 'bold',
+          fontSize: '20px',
+          backgroundColor: '#888667',
+          display: 'none',
+          borderRadius: '8px',
+          '@xs': {
+            display: 'block',
+          },
+        }}
+        onClick={() => handleButtonClick('Button 1 content')}>
+        PACKING LIST
+      </Button>
+      <Button
+        className='day-btn'
+        css={{
+          fontWeight: 'bold',
+          fontSize: '20px',
+          backgroundColor: '#888667',
+          display: 'none',
+          borderRadius: '8px',
+          '@xs': {
+            display: 'block',
+          },
+        }}
+        onClick={() => handleButtonClick('Button 2 content')}>
+        A TYPICAL DAY
+      </Button>
+      <Button
+        className='faq-btn'
+        css={{
+          fontWeight: 'bold',
+          fontSize: '20px',
+          backgroundColor: '#888667',
+          display: 'none',
+          borderRadius: '8px',
+          '@xs': {
+            display: 'block',
+          },
+        }}
+        onClick={() => handleButtonClick('Button 3 content')}>
+        FAQ
+      </Button>
       <div>{content}</div>
     </div>
   );

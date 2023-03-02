@@ -13,7 +13,6 @@ import {
 import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
-import PageNavigation from './PageNavigation';
 import styled from 'styled-components';
 import ImageOne from '../assets/home/boat-cast-web.jpg';
 import ImageTwo from '../assets/home/brian-jo-web.jpg';
@@ -514,7 +513,6 @@ export default function Home() {
           </motion.div>
         </CardsGrid>
       </HomeGridTwo>
-      <PageNavigation />
     </>
   );
 }

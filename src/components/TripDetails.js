@@ -5,7 +5,31 @@ import { Text, Container } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import HeroImage from '../assets/trip-details/trip-details-hero.jpg';
 import PageNavigation from './PageNavigation';
-import { marginTop } from 'styled-system';
+import styled from 'styled-components';
+import {
+  compose,
+  color,
+  space,
+  border,
+  typography,
+  layout,
+  grid,
+} from 'styled-system';
+
+const DetailsGrid = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: 1fr;
+    margin-top: 4em;
+  }
+`;
 
 export default function TripDetails() {
   return (
@@ -63,9 +87,9 @@ export default function TripDetails() {
           </Container>
         </Container>
       </HeroImageContainer>
-      <div>
+      <DetailsGrid>
         <PageNavigation />
-      </div>
+      </DetailsGrid>
     </>
   );
 }
