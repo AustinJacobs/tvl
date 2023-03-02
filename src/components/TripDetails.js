@@ -5,6 +5,7 @@ import { Text, Container } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import HeroImage from '../assets/trip-details/trip-details-hero.jpg';
 import PageNavigation from './PageNavigation';
+import { marginTop } from 'styled-system';
 
 export default function TripDetails() {
   return (
@@ -62,7 +63,9 @@ export default function TripDetails() {
           </Container>
         </Container>
       </HeroImageContainer>
-      <PageNavigation />
+      <div>
+        <PageNavigation />
+      </div>
     </>
   );
 }
