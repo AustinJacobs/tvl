@@ -5,7 +5,6 @@ import {
   Button,
   Text,
   Container,
-  Image,
   Card,
   Col,
   Row,
@@ -199,7 +198,7 @@ export default function Home() {
             from spring creek to rushing rapids.
           </Text>
 
-          <Text className='paragraph-two'>
+          <Text className='paragraph-two paragraph'>
             Our great grandfather started guiding in 1919. We pride ourselves on
             the service and high caliber of our fly fishing lodge and dining
             facilities. We look forward to sharing with you an experience of
@@ -288,7 +287,7 @@ export default function Home() {
           </Text>
           <HorizontalRule className='hr-centered' />
           <Text
-            className='paragraph-centered'
+            className='paragraph-centered paragraph'
             css={{
               width: '100%',
               margin: '0 auto',

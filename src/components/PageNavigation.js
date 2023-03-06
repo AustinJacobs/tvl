@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Navbar, Link, Dropdown, Image, Text, Button } from '@nextui-org/react';
 import '../components/styles/PageNavigation.css';
+import PackingDetail from './details/PackingDetail';
+import DayDetail from './details/DayDeail';
+import FAQDetail from './details/FAQDetail';
 
 export default function PageNavigation() {
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState(PackingDetail);
 
   const handleButtonClick = (content) => {
     setContent(content);
@@ -16,13 +19,13 @@ export default function PageNavigation() {
         css={{
           fontWeight: 'bold',
           fontSize: '20px',
-          backgroundColor: '#888667',
+          backgroundColor: '#506A63',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
           },
         }}
-        onClick={() => handleButtonClick('Button 1 content')}>
+        onClick={() => handleButtonClick(PackingDetail)}>
         PACKING LIST
       </Button>
       <Button
@@ -30,13 +33,13 @@ export default function PageNavigation() {
         css={{
           fontWeight: 'bold',
           fontSize: '20px',
-          backgroundColor: '#888667',
+          backgroundColor: '#506A63',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
           },
         }}
-        onClick={() => handleButtonClick('Button 2 content')}>
+        onClick={() => handleButtonClick(DayDetail)}>
         A TYPICAL DAY
       </Button>
       <Button
@@ -44,16 +47,16 @@ export default function PageNavigation() {
         css={{
           fontWeight: 'bold',
           fontSize: '20px',
-          backgroundColor: '#888667',
+          backgroundColor: '#506A63',
           borderRadius: '8px',
           '@xs': {
             display: 'block',
           },
         }}
-        onClick={() => handleButtonClick('Button 3 content')}>
+        onClick={() => handleButtonClick(FAQDetail)}>
         FAQ
       </Button>
-      <div>{content}</div>
+      <div className='detail-content-container'>{content}</div>
     </div>
   );
 }

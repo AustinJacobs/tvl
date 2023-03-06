@@ -113,6 +113,7 @@ video {
 .paragraph {
   color: #181617;
   font-family: 'Lora', serif;
+  font-size: 18px;
 }
 
 .paragraph-centered {
@@ -146,6 +147,53 @@ video {
 
 .card-logo-container {
   align-self: center;
+}
+
+.detail-content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 1/2;
+}
+
+.detail-paragraph {
+  margin: 1em 0 0 0;
+}
+
+.detail-heading {
+  margin: 1.5em 0 0 0;
+  color: #888667;
+}
+
+.detail-list > ul {
+  margin: 1em 0 0 2em;
+  list-style: none;
+  position: relative;
+}
+
+.detail-list > ul > li {
+  padding-top: .25em;
+}
+
+.detail-list > ul > li::before {
+  content: "•";
+  color: #F75A0E;
+  position: absolute;
+  left: -0.8em;
+  font-size: 1.1em;
+}
+
+.nextui-c-hPzDAx .nextui-collapse-title {
+  color: #888667;
+}
+
+.nextui-c-fUXRSc path {
+  stroke: #F75A0E;
+}
+
+@media only screen and (min-width: 800px) {
+  .detail-content-container {
+    grid-column: 1/4;
+  }
 }
 
 `;
