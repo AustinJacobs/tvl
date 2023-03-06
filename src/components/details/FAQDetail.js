@@ -7,7 +7,7 @@ export default function FAQDetail() {
       <Grid>
         <Collapse.Group>
           <Collapse title='Option A'>
-            <Text>
+            <Text className='collapse-text'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -15,7 +15,7 @@ export default function FAQDetail() {
             </Text>
           </Collapse>
           <Collapse title='Option B'>
-            <Text>
+            <Text className='collapse-text'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -23,7 +23,7 @@ export default function FAQDetail() {
             </Text>
           </Collapse>
           <Collapse title='Option C'>
-            <Text>
+            <Text className='collapse-text'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

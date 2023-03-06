@@ -184,10 +184,18 @@ video {
 
 .nextui-c-hPzDAx .nextui-collapse-title {
   color: #888667;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.4em;
 }
 
 .nextui-c-fUXRSc path {
   stroke: #F75A0E;
+}
+
+.collapse-text {
+  color: #181617;
+  font-family: 'Lora', serif;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 800px) {
