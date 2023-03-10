@@ -33,8 +33,10 @@ export default function Teton() {
                 css={{
                   color: '#ffffff',
                   fontSize: '50px',
+                  marginTop: '4em',
                   '@xs': {
                     fontSize: '70px',
+                    marginTop: '0',
                   },
                 }}>
                 TETON RIVER

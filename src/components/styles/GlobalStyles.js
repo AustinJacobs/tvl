@@ -17,11 +17,15 @@ body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
   overflow-x: hidden;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  box-shadow: 0 3px 8px -6px gray;
 }
 
 .navLink:visited {

@@ -33,8 +33,10 @@ export default function HenrysFork() {
                 css={{
                   color: '#ffffff',
                   fontSize: '50px',
+                  marginTop: '4em',
                   '@xs': {
                     fontSize: '70px',
+                    marginTop: '0',
                   },
                 }}>
                 HENRY'S FORK

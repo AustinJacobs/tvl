@@ -1,14 +1,7 @@
 import React from 'react';
 import HeroVideo from '../assets/HeroVideo.mp4';
 import HeroVideoContainer from './styles/HeroVideoContainer';
-import {
-  Button,
-  Text,
-  Container,
-  Card,
-  Col,
-  Row,
-} from '@nextui-org/react';
+import { Button, Text, Container, Card, Col, Row } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import '../components/styles/Home.css';
 import HorizontalRule from '../components/styles/HorizontalRule';
@@ -23,6 +16,7 @@ import CardOne from '../assets/cards/holding-fish-card-2.jpg';
 import CardTwo from '../assets/cards/guide-card.jpg';
 import CardThree from '../assets/cards/shuttle-request-card.jpg';
 import CardLogo from '../assets/tvl_logo_bw.png';
+import Mosaic from './Mosaic';
 
 import {
   compose,
@@ -60,6 +54,18 @@ const HomeGridTwo = styled.div`
   }
 `;
 
+const HomeGridThree = styled.div`
+  ${compose(color, space, border, typography, layout, grid)}
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2em;
+
+  @media only screen and (min-width: 1000px) {
+    margin-top: 4em;
+  }
+`;
+
 const CardsGrid = styled.div`
   ${compose(color, space, border, typography, layout, grid)}
 
@@ -68,7 +74,7 @@ const CardsGrid = styled.div`
   grid-column: 1/3;
   grid-row: 2/3;
   gap: 4em;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 2em;
 
@@ -104,8 +110,10 @@ export default function Home() {
                 css={{
                   color: '#ffffff',
                   fontSize: '50px',
+                  marginTop: '4em',
                   '@xs': {
-                    fontSize: '60px',
+                    fontSize: '70px',
+                    marginTop: '2em',
                   },
                 }}>
                 TETON VALLEY LODGE
@@ -512,6 +520,9 @@ export default function Home() {
           </motion.div>
         </CardsGrid>
       </HomeGridTwo>
+      <HomeGridThree>
+        <Mosaic />
+      </HomeGridThree>
     </>
   );
 }

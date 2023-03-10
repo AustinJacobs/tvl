@@ -21,7 +21,6 @@ const DetailsGrid = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 1000px;
   margin: 0 auto;
   margin-top: 2em;
   width: 90%;
@@ -29,7 +28,7 @@ const DetailsGrid = styled.div`
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr;
     margin-top: 4em;
-    width: 100%;
+    max-width: 1200px;
   }
 `;
 
@@ -62,8 +61,10 @@ export default function TripDetails() {
                 css={{
                   color: '#ffffff',
                   fontSize: '50px',
+                  marginTop: '4em',
                   '@xs': {
                     fontSize: '70px',
+                    marginTop: '0',
                   },
                 }}>
                 TRIP DETAILS
