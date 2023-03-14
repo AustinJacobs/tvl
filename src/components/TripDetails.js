@@ -15,6 +15,7 @@ import {
   layout,
   grid,
 } from 'styled-system';
+import ScrollWheel from './ScrollWheel';
 
 const DetailsGrid = styled.div`
   ${compose(color, space, border, typography, layout, grid)}
@@ -90,6 +91,9 @@ export default function TripDetails() {
           </Container>
         </Container>
       </HeroImageContainer>
+      <div>
+        <ScrollWheel />
+      </div>
       <DetailsGrid>
         <PageNavigation />
       </DetailsGrid>

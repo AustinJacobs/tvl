@@ -17,6 +17,7 @@ import CardTwo from '../assets/cards/guide-card.jpg';
 import CardThree from '../assets/cards/shuttle-request-card.jpg';
 import CardLogo from '../assets/tvl_logo_bw.png';
 import Mosaic from './Mosaic';
+import ScrollWheel from './ScrollWheel';
 
 import {
   compose,
@@ -27,6 +28,7 @@ import {
   layout,
   grid,
 } from 'styled-system';
+
 
 const HomeGrid = styled.div`
   ${compose(color, space, border, typography, layout, grid)}
@@ -168,6 +170,9 @@ export default function Home() {
           </Container>
         </Container>
       </HeroVideoContainer>
+      <div>
+        <ScrollWheel />
+      </div>
       <HomeGrid>
         <div className='container'>
           <Text

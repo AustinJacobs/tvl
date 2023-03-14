@@ -3,6 +3,7 @@ import HeroImageContainer from '../../components/styles/HeroImageContainer';
 import { Text, Container } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import HeroImage from '../../assets/teton_river.jpg';
+import ScrollWheel from '../ScrollWheel';
 
 export default function Teton() {
   return (
@@ -62,6 +63,9 @@ export default function Teton() {
           </Container>
         </Container>
       </HeroImageContainer>
+      <div>
+        <ScrollWheel />
+      </div>
     </>
   );
 }

@@ -149,6 +149,11 @@ video {
   color: white;
 }
 
+.card-logo-booking {
+  width: 50px;
+  color: white;
+}
+
 .card-logo-container {
   align-self: center;
 }
@@ -206,6 +211,10 @@ video {
   .detail-content-container {
     grid-column: 1/4;
   }
+}
+
+.nextui-c-dfbgCO-idIWWzx-css {
+  align-items: center;
 }
 
 `;

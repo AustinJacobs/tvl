@@ -1,0 +1,47 @@
+.anim-scroll {
+  border: 2px solid #181617;
+  border-radius: 22px;
+  height: 40px;
+  position: relative;
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+.wheel {
+  animation: scroll 2.5s ease infinite;
+  background: #f75a0e;
+  border-radius: 30px;
+  height: 8px;
+  left: calc(50% - 1.5px);
+  position: absolute;
+  right: 50%;
+  top: 8px;
+  width: 3px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(16px);
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .anim-scroll {
+    display: none;
+  }
+
+  .wheel {
+    display: none;
+  }
+}

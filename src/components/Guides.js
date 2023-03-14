@@ -1,7 +1,10 @@
 import React from 'react'
+import ScrollWheel from './ScrollWheel';
 
 export default function Guides() {
   return (
-    <div>Guides</div>
-  )
+    <div>
+      <ScrollWheel />
+    </div>
+  );
 }
